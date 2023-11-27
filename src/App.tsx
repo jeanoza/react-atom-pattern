@@ -1,11 +1,13 @@
-import Button from "./components/atoms/Button";
-import Home from "./pages/Home";
+import Home from "./components/pages/Home";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
