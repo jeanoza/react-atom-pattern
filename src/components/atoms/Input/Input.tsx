@@ -26,10 +26,10 @@ function Input(props: InputProps) {
 
   return (
     <input
+      {...restProps}
       className={defaultInputStyle + " " + inputStyle ?? ""}
       value={value}
       onChange={onChange}
-      {...restProps}
     />
   );
 }

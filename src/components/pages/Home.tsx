@@ -1,9 +1,10 @@
 import { useState } from "react";
 import LoginForm from "../organisms/Forms/LoginForm";
+import Layout from "../atoms/Layout/Layout";
 
 export default function Home() {
   return (
-    <div>
+    <Layout>
       <h1>Atoms</h1>
       {/* <div className="flex gap-1 justify-center items-center">
         <div>Buttons:</div>
@@ -29,6 +30,6 @@ export default function Home() {
         <Button label="alert states" onClick={() => console.log(data)} />
       </div> */}
       <LoginForm />
-    </div>
+    </Layout>
   );
 }
