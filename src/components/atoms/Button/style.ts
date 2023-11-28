@@ -1,0 +1,1 @@
+export const defaultStyle = 'py-1 px-2 rounded bg-neutral-700 text-white capitalize hover:opacity-80'

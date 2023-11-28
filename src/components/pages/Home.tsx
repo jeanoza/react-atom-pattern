@@ -1,6 +1,6 @@
-import { useState } from "react";
-import LoginForm from "../organisms/Forms/LoginForm";
-import Layout from "../atoms/Layout/Layout";
+import { useState } from 'react'
+import LoginForm from '../organisms/Forms/LoginForm'
+import Layout from '../atoms/Layout'
 
 export default function Home() {
   return (
@@ -31,5 +31,5 @@ export default function Home() {
       </div> */}
       <LoginForm />
     </Layout>
-  );
+  )
 }
