@@ -1,10 +1,12 @@
 const defaultStyle = 'flex flex-col gap-4'
 
-interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {}
+interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
+  formStyle?: string
+}
 function Form(props: FormProps) {
-  const { children, ...restProps } = props
+  const { formStyle, children, ...restProps } = props
   return (
-    <form className={defaultStyle} {...restProps}>
+    <form className={`${defaultStyle} ${formStyle ?? ''}`} {...restProps}>
       {children}
     </form>
   )

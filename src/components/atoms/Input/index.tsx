@@ -11,7 +11,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 function Input(props: InputProps) {
-  const { value, setValue, inputStyle } = props
+  const { value, setValue, inputStyle, placeholder, label, ...restProps } = props
 
   const handleOnChange = useCallback(
     (e: ChangeEvent<HTMLInputElement>) => {
@@ -20,7 +20,15 @@ function Input(props: InputProps) {
     [setValue]
   )
 
-  return <input className={`${defaultInputStyle} ${inputStyle ?? ''}`} value={value} onChange={handleOnChange} />
+  return (
+    <input
+      {...restProps}
+      className={`${defaultInputStyle} ${inputStyle ?? ''}`}
+      value={value}
+      onChange={handleOnChange}
+      placeholder={placeholder ?? label}
+    />
+  )
 }
 
 function Label(props: InputProps) {
