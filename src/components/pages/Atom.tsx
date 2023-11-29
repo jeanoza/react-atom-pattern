@@ -26,7 +26,7 @@ export default function Atom() {
   return (
     <Layout>
       <h1 className='text-2xl text-center mb-4 mt-8 capitalize'>{pathname.slice(1)}</h1>
-      {CardListWrapper(list)}
+      <CardListWrapper list={list} />
     </Layout>
   )
 }

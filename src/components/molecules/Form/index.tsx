@@ -1,4 +1,4 @@
-const defaultStyle = 'flex flex-col gap-4'
+const defaultStyle = 'flex flex-col gap-4 bg-inherit'
 
 interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
   formStyle?: string

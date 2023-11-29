@@ -29,17 +29,11 @@ function LoginForm(props: LoginFormProps) {
 
   return (
     <div className={`${defaultWrapperStyle} ${wrapperStyle ?? ''}`}>
-      <div>LoginForm</div>
       <Card cardStyle='border'>
         <Form onSubmit={handleOnSubmit}>
-          <Input
-            label='name'
-            value={data.name}
-            setValue={name => setData({ ...data, name })}
-            wrapperStyle='border border-red-200'
-          />
+          <Input label='name' value={data.name} setValue={name => setData({ ...data, name })} />
           <Input label='email' value={data.email} setValue={email => setData({ ...data, email })} />
-          <div className='flex justify-end w-100 my-'>
+          <div className='flex justify-end w-100'>
             <Button type='submit' label='login' />
           </div>
         </Form>

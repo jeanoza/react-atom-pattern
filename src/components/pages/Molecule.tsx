@@ -17,7 +17,7 @@ export default function Molecules() {
       {
         label: 'Card',
         component: (
-          <Card cardStyle='border'>
+          <Card cardStyle='border border-red-400'>
             <Input label={'user name'} value={username} setValue={setUsername} placeholder='user name' />
           </Card>
         )
@@ -38,8 +38,8 @@ export default function Molecules() {
 
   return (
     <Layout>
-      <h1 className='text-xl text-center mb-4 mt-8 capitalize'>{pathname.slice(1)}</h1>
-      {CardListWrapper(list)}
+      <h1 className='text-2xl text-center mb-4 mt-8 capitalize'>{pathname.slice(1)}</h1>
+      <CardListWrapper list={list} />
     </Layout>
   )
 }
