@@ -16,12 +16,11 @@ export function CardListWrapper({ list }: CardListWrapperProps) {
   return (
     <div className='flex flex-col gap-4'>
       {list.map((item, index) => (
-        <div
-          key={`CardItem[${index}]`}
-          className='flex justify-between items-center m-auto max-w-3xl w-full gap-4 overflow-auto'
-        >
+        <div key={`CardItem[${index}]`} className='flex justify-between items-center m-auto max-w-3xl w-full gap-4'>
           <h3 className='text-lg capitalize'>{item.label}</h3>
-          <Card>{item.component}</Card>
+          <div className='overflow-auto w-3/5'>
+            <Card>{item.component}</Card>
+          </div>
         </div>
       ))}
     </div>
