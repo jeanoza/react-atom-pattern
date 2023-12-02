@@ -11,7 +11,6 @@ export default function Card(props: CardProps) {
 interface CardListWrapperProps {
   list: { label: string; component: JSX.Element }[]
 }
-
 export function CardListWrapper({ list }: CardListWrapperProps) {
   return (
     <div className='flex flex-col gap-4'>

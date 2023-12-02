@@ -1,6 +1,5 @@
-import { useMemo, useState } from 'react'
-import Input from '../atoms/Input'
-import Card, { CardListWrapper } from '../molecules/Card'
+import { useMemo } from 'react'
+import { CardListWrapper } from '../molecules/Card'
 import Layout from '../layout'
 import { useLocation } from 'react-router-dom'
 import Navbar from '../organisms/Navbar'
